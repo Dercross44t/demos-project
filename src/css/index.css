@@ -1,0 +1,123 @@
+:root {
+    --color-primary: #032457;
+    --color-dark: black;
+    --color-background: #f4f6f8;
+    --color-surface: #ffffff;
+    --color-text: #1f2933;
+    --color-border: #d9dee5;
+    --space-base: 1rem;
+    --radius-card: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 1000px;
+    background: linear-gradient(135deg, var(--color-primary), #5a0000);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: calc(var(--space-base) * 2.5) var(--space-base);
+}
+
+.card {
+    background: var(--color-surface);
+    border-radius: var(--radius-card);
+    box-shadow: 0 10px 25px rgb(0 0 0 / 8%);
+    overflow: hidden;
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--color-primary), #5a0000);
+    color: white;
+    padding: calc(var(--space-base) * 1.8) calc(var(--space-base) * 2);
+}
+
+    .card-header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+.table-wrapper {
+    padding: calc(var(--space-base) * 1.8) calc(var(--space-base) * 2);
+    overflow-x: auto;
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+}
+
+    .inventory-table thead {
+        background: var(--color-dark);
+        color: white;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding: 0.9rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 0.95rem;
+    }
+
+    .inventory-table th {
+        font-weight: 700;
+    }
+
+    .inventory-table tbody tr:hover {
+        background: #f1f5f9;
+    }
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+    .badge.active {
+        background: #d1fae5;
+        color: #065f46;
+    }
+
+    .badge.warning {
+        background: #fef3c7;
+        color: #92400e;
+    }
+
+    .badge.inactive {
+        background: #fee2e2;
+        color: #991b1b;
+    }
+
+@media (max-width: 700px) {
+    .card-header {
+        padding: 1.4rem;
+    }
+
+        .card-header h1 {
+            font-size: 1.5rem;
+        }
+
+    .table-wrapper {
+        padding: 1.2rem;
+    }
+
+    .inventory-table th,
+    .inventory-table td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+}

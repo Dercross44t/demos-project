@@ -1,9 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <h1>Martin Chavez Angulo<h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario API - Tabla HTML</title>
+
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
+    <main class="page">
+        <section class="card">
+
+            <header class="card-header">
+                <h1>Inventario de Productos</h1>
+            </header>
+
+            <section class="table-wrapper">
+                <table class="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mouse Logitech M170</td>
+                            <td>Periféricos</td>
+                            <td>₡8,500</td>
+                            <td>15</td>
+                            <td><span class="badge active">Disponible</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Teclado Mecánico Redragon</td>
+                            <td>Periféricos</td>
+                            <td>₡28,000</td>
+                            <td>7</td>
+                            <td><span class="badge active">Disponible</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Monitor Samsung 24"</td>
+                            <td>Monitores</td>
+                            <td>₡79,900</td>
+                            <td>3</td>
+                            <td><span class="badge warning">Bajo stock</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>4</td>
+                            <td>Disco SSD Kingston 480GB</td>
+                            <td>Almacenamiento</td>
+                            <td>₡24,500</td>
+                            <td>0</td>
+                            <td><span class="badge inactive">Agotado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+    </main>
+
+    <script src="index.js"></script>
 </body>
 </html>
